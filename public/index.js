@@ -1,9 +1,13 @@
 import hydrate from 'preact-iso/hydrate';
 import { LocationProvider, Router } from 'preact-iso/router';
 import lazy, { ErrorBoundary } from 'preact-iso/lazy';
+import { setDefaultOptions } from 'esri-loader';
 import Home from './pages/home/index.js';
 import NotFound from './pages/_404.js';
 import Header from './header.js';
+
+// configure esri-loader to lazy load ArcGIS styles
+setDefaultOptions({ css: true });
 
 const About = lazy(() => import('./pages/about/index.js'));
 

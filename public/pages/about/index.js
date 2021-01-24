@@ -1,10 +1,12 @@
 import styles from './style.module.css';
+import Map from './map';
 
 const About = ({ query }) => (
+
 	<section class={styles.about}>
 		<h1>About</h1>
-		<p>A page all about this website.</p>
-		<pre>{JSON.stringify(query)}</pre>
+		<p>Visit our headquarters.</p>
+		<Map basemap={query.basemap} />
 	</section>
 );
 
